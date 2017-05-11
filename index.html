@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Page</title>
+<style>
+#test_div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s, height 1s;
+    transition-delay: 1s;
+}
+
+#test_div.loaded {
+      width: 200px;
+    height: 200px;
+  }
+</style>
+<script>
+  window.onload = function() {
+    document.getElementById('test_div').className += " loaded";
+  }
+</script>
+</head>
+
+<body id="test_body">
+  <div id='test_div' class=''></div>
+</body>
+</html>
